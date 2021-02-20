@@ -11,21 +11,21 @@ namespace SIGA\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
 
-class EditCommand extends Command
+class DefaultCommand extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'livewire:_edit {name} {module=default} {--force} {--inline} {--stub=edit}';
+    protected $signature = 'livewire:_dafault {name} {module=default} {--force} {--inline} {--stub=default}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Gerar componente Edit livewire para modules';
+    protected $description = 'Gerar componente default livewire para modules';
 
 
     /**
@@ -35,9 +35,10 @@ class EditCommand extends Command
      */
     public function handle()
     {
-        $name = Str::plural($this->argument('name'));
+
+        $name = $this->argument('name');
         $this->call('livewire:_module',[
-            'name'=>sprintf('%s/EditComponent', $name),
+            'name'=>$name,
             'module'=> $this->argument('module'),
             '--force' => $this->option('force'),
             '--stub' => $this->option('stub'),

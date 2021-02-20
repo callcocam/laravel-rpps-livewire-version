@@ -7,12 +7,12 @@
 
 namespace [namespace];
 
-use Livewire\Component;
+use App\Http\Livewire\AbstractComponent;
 
-class [class] extends Component
+class [class] extends AbstractComponent
 {
-    public function render()
+    public function view()
     {
-        return view('[view]');
+        return '[view]';
     }
 }

@@ -27,8 +27,8 @@ trait HasUtils
     public function actionLink($model, $action)
     {
         if ($this->permission($action)) {
-            if (Route::has(sprintf('admin.%s.%s', $this->route(), $action))) {
-                return route(sprintf('admin.%s.%s', $this->route(), $action), array_merge(
+            if (Route::has(sprintf('%s-admin-%s', $this->route(), $action))) {
+                return route(sprintf('%s-admin-%s', $this->route(), $action), array_merge(
                     [$this->getRouteKeyName() => $model], request()->query()
                 ));
             }
@@ -41,8 +41,8 @@ trait HasUtils
     {
         if ($this->permission('create')) {
             if ($this->route()) {
-                if (Route::has(sprintf('admin.%s.create', $this->route()))) {
-                    return route(sprintf('admin.%s.create', $this->route()), request()->query());
+                if (Route::has(sprintf('%s-admin-create', $this->route()))) {
+                    return route(sprintf('%s-admin-create', $this->route()), request()->query());
                 }
             }
         }
@@ -52,10 +52,10 @@ trait HasUtils
 
     public function reloadLink()
     {
-        if ($this->permission('index')) {
+        if ($this->permission('stores')) {
             if ($this->route()) {
-                if (Route::has(sprintf('admin.%s.index', $this->route()))) {
-                    return route(sprintf('admin.%s.index', $this->route()));
+                if (Route::has(sprintf('%s-admin-stores', $this->route()))) {
+                    return route(sprintf('%s-admin-stores', $this->route()));
                 }
             }
         }
@@ -66,7 +66,7 @@ trait HasUtils
 
     public function permission($action)
     {
-        return sprintf('admin.%s.%s', $this->route(), $action);
+        return sprintf('%s-admin-%s', $this->route(), $action);
     }
 
     public function getRouteKeyName(){

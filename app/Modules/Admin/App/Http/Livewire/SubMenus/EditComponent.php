@@ -7,13 +7,13 @@
 
 namespace App\Modules\Admin\App\Http\Livewire\SubMenus;
 
+use App\Modules\Admin\App\Models\Menu;
+use App\Modules\Admin\App\Models\SubMenu;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Str;
 use SIGA\Form\Fields\Select;
 use SIGA\Form\Fields\Text;
 use SIGA\Form\FormComponent;
-use SIGA\Models\LandlordMenu;
-use SIGA\Models\LandlordSubMenu;
 use Symfony\Component\Finder\SplFileInfo;
 
 class EditComponent extends FormComponent
@@ -21,7 +21,7 @@ class EditComponent extends FormComponent
 
     protected $route = "sub-menus";
 
-    public function mount(LandlordSubMenu $submenu)
+    public function mount(SubMenu $submenu)
     {
 
         $this->setFormProperties($submenu);
@@ -32,13 +32,13 @@ class EditComponent extends FormComponent
      */
     public function fields()
     {
-        $submenu = LandlordSubMenu::query();
-        $menu = LandlordMenu::query();
+        $submenu = SubMenu::query();
+        $menu = Menu::query();
         return [
             Text::make('Name'),
             Text::make('Slug'),
             Select::make('Menu', 'menu_id')->target($menu, $this->isSingleSelectSearch('menu_id')),
-            Select::make('Sub Menus', 'sub_menu_id')->target($submenu, $this->isSingleSelectSearch('sub_menu_id')),
+            Select::make('Sub Menus', 'parent')->target($submenu, $this->isSingleSelectSearch('parent')),
             Text::make('Link'),
             Select::make('Icon')->options($this->icons()),
         ];

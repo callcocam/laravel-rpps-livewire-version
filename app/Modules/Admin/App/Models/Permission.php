@@ -9,13 +9,8 @@ namespace App\Modules\Admin\App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use SIGA\Acl\Models\AbstractPermission;
 use SIGA\Concerns\UsesLandlordConnection;
-use SIGA\Scopes\UuidGenerate;
 
 class Permission extends AbstractPermission
 {
-    use HasFactory, UsesLandlordConnection, UuidGenerate;
-
-    public $incrementing = false;
-
-    protected $keyType = "string";
+    use HasFactory, UsesLandlordConnection;
 }

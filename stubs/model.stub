@@ -8,8 +8,9 @@ namespace {{ namespace }};
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use SIGA\Models\AbstractModel;
+use SIGA\Scopes\UuidGenerate;
 
 class {{ class }} extends AbstractModel
 {
-    use HasFactory;
+    use HasFactory, UuidGenerate;
 }

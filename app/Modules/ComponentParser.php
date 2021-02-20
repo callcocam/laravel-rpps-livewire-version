@@ -9,16 +9,20 @@ namespace SIGA;
 
 
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Str;
 use Livewire\Commands\ComponentParser as ComponentParserAlias;
+use Illuminate\Support\Str;
 
 class ComponentParser extends ComponentParserAlias
 {
 
-    protected $templateStub = 'table.stub';
+    protected $templateStub = 'table';
+    protected $model;
+    protected $routes;
 
     public function __construct($classNamespace, $viewPath, $rawCommand)
     {
+        $this->routes = Str::slug( Str::beforeLast($rawCommand,'/'));
+        $this->model = Str::singular( Str::beforeLast($rawCommand,'/'));
 
         parent::__construct($classNamespace, $viewPath, $rawCommand);
     }
@@ -51,9 +55,9 @@ class ComponentParser extends ComponentParserAlias
             $template = preg_replace('/\[quote\]/', $this->wisdomOfTheTao(), $template);
         }
 
-        return preg_replace_array(
-            ['/\[namespace\]/', '/\[class\]/', '/\[view\]/'],
-            [$this->classNamespace(), $this->className(), $this->viewName()],
+        return str_replace(
+            ['[namespace]', '[model]', '[class]', '[view]', '[param]', '[routes]'],
+            [ $this->classNamespace(),$this->model, $this->className(), $this->viewName(), Str::slug($this->model), $this->routes],
             $template
         );
     }

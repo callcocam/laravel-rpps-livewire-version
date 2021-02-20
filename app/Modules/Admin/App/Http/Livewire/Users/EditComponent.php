@@ -5,19 +5,19 @@
  * https://www.sigasmart.com.br
  */
 
-namespace App\Modules\Admin\App\Http\Livewire\Permissions;
+namespace App\Modules\Admin\App\Http\Livewire\Users;
 
-use App\Modules\Admin\App\Models\Permission;
+use App\Models\User;
 use SIGA\Form\FormComponent;
 
 class EditComponent extends FormComponent
 {
 
-        protected $route = "permissions";
+        protected $route = "users";
 
-        public function mount(Permission $model)
+        public function mount(User $user)
         {
-           $this->setFormProperties($model);
+           $this->setFormProperties($user);
         }
 
         /**

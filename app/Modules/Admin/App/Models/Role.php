@@ -9,13 +9,9 @@ namespace App\Modules\Admin\App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use SIGA\Acl\Models\AbstractRole;
 use SIGA\Concerns\UsesLandlordConnection;
-use SIGA\Scopes\UuidGenerate;
 
 class Role extends AbstractRole
 {
-    use HasFactory, UsesLandlordConnection, UuidGenerate;
+    use HasFactory, UsesLandlordConnection;
 
-    public $incrementing = false;
-
-    protected $keyType = "string";
 }

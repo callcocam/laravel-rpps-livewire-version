@@ -8,8 +8,8 @@
 namespace App\Modules\Admin\App\Http\Livewire\SubMenus;
 
 
+use App\Modules\Admin\App\Models\SubMenu;
 use Livewire\Component;
-use SIGA\Models\LandlordSubMenu;
 
 class ManagerComponent extends Component
 {
@@ -61,7 +61,7 @@ class ManagerComponent extends Component
     {
         if ($ordereds) {
             foreach ($ordereds as $ordered) {
-                $submenu = LandlordSubMenu::find($ordered['value']);
+                $submenu = SubMenu::find($ordered['value']);
                 $submenu->ordering = $ordered['order'];
                 $submenu->save();
             }
@@ -71,7 +71,7 @@ class ManagerComponent extends Component
 
     protected function load()
     {
-        $this->groups = LandlordSubMenu::query()
+        $this->groups = SubMenu::query()
             ->orderby('ordering')
             ->orderby('name')->whereNull('sub_menu_id')->where('status', 1)->get();
     }

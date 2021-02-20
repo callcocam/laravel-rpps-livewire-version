@@ -8,8 +8,8 @@
         @if(\Illuminate\Support\Facades\Route::has('admin-admin-stores'))
             <li class="c-sidebar-nav-item">
                 <a class="c-sidebar-nav-link" href="{{ route('admin-admin-stores') }}">
-                    <i class="fas fa-home c-sidebar-nav-icon"></i>
-                    @lang('admin.admin.stores')
+                    <i class="cil-house c-sidebar-nav-icon"></i>
+                    @lang('admin.admin-stores')
                 </a>
             </li>
         @endif
@@ -67,11 +67,11 @@
             @endforeach
         @endif
 
-        @if(\Illuminate\Support\Facades\Route::has('home-index-stores'))
+        @if(\Illuminate\Support\Facades\Route::has('icons-admin-index'))
             <li class="c-sidebar-nav-item">
-                <a class="c-sidebar-nav-link" href="{{ route('home-index-stores') }}">
-                    <i class="fas fa-user c-sidebar-nav-icon"></i>
-                    @lang('admin.index.stores')
+                <a class="c-sidebar-nav-link" href="{{ route('icons-admin-index') }}">
+                    <i class="cil-3d c-sidebar-nav-icon"></i>
+                    @lang('admin.icons-stores')
                 </a>
             </li>
         @endif
@@ -79,8 +79,8 @@
         @if(\Illuminate\Support\Facades\Route::has('logout'))
             <li class="c-sidebar-nav-item">
                 <a class="c-sidebar-nav-link" href="{{ route('logout') }}">
-                    <i class="cil-cloud-download c-sidebar-nav-icon"></i>
-                    @lang('logout')
+                    <i class="cil-account-logout c-sidebar-nav-icon"></i>
+                    @lang('admin.logout')
                 </a>
             </li>
         @endif

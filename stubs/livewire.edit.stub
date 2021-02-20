@@ -7,17 +7,17 @@
 
 namespace [namespace];
 
+use App\Models\[model];
 use SIGA\Form\FormComponent;
-use Illuminate\Database\Eloquent\Builder;
 
 class [class] extends FormComponent
 {
 
-        protected $route = "[route]";
+        protected $route = "[routes]";
 
-        public function mount($model=null)
+        public function mount([model] $[param])
         {
-           $this->setFormProperties($model);
+           $this->setFormProperties($[param]);
         }
 
         /**

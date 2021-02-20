@@ -7,16 +7,16 @@
 
 namespace App\Modules\Admin\App\Http\Livewire\Permissions;
 
+use App\Modules\Admin\App\Models\Permission;
 use SIGA\Form\FormComponent;
-use Illuminate\Database\Eloquent\Builder;
 
 class CreateComponent extends FormComponent
 {
 
-        protected $route = "[route]";
+        protected $route = "permissions";
 
 
-        public function mount($model=null)
+        public function mount(Permission $model)
         {
            $this->setFormProperties($model);
         }

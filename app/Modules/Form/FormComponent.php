@@ -43,7 +43,7 @@ class FormComponent extends Component
 
     public function layout(): string
     {
-        return sprintf('admin::layouts.%s', app('currentCompany')->prefix);
+        return 'admin::layouts.admin';
     }
 
     public function input($data)
@@ -196,7 +196,7 @@ class FormComponent extends Component
      */
     public function saveAndStayResponse()
     {
-        return redirect()->route(sprintf('admin.%s.edit', $this->route), array_merge(
+        return redirect()->route(sprintf('%s-admin-edit', $this->route), array_merge(
             [$this->getRouteKeyName() => $this->model], request()->query()
         ));
     }
@@ -217,7 +217,7 @@ class FormComponent extends Component
      */
     public function saveAndGoBackResponse()
     {
-        return redirect()->route(sprintf("admin.%s.index", $this->route));
+        return redirect()->route(sprintf("%s-admin-stores", $this->route));
     }
 
 

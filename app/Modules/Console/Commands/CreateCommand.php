@@ -36,7 +36,6 @@ class CreateCommand extends Command
      */
     public function handle()
     {
-
         $name = Str::plural($this->argument('name'));
         $this->call('livewire:_module',[
             'name'=>sprintf('%s/CreateComponent', $name),

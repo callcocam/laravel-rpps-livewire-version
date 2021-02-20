@@ -7,7 +7,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -130,24 +130,24 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public_html/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu-20.04\var\www\jardel\laravel-rpps-livewire-version" />
+      <recent name="\\wsl$\Ubuntu-20.04\var\www\jardel\laravel-rpps-livewire-version\app\Modules\Console\Commands" />
+      <recent name="\\wsl$\Ubuntu-20.04\var\www\jardel\laravel-rpps-livewire-version\resources\views\components" />
+      <recent name="\\wsl$\Ubuntu-20.04\var\www\jardel\laravel-rpps-livewire-version\app\Modules\Livewire" />
+      <recent name="\\wsl$\Ubuntu-20.04\var\www\jardel\laravel-rpps-livewire-version\app\Modules\Admin\App\Http\Livewire" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="\\wsl$\Ubuntu-20.04\var\www\jardel\laravel-rpps-livewire-version\resources\views\layouts" />
       <recent name="\\wsl$\Ubuntu-20.04\var\www\jardel\laravel-rpps-livewire-version\app\View\Components" />
       <recent name="\\wsl$\Ubuntu-20.04\var\www\jardel\laravel-rpps-livewire-version\resources\views" />
       <recent name="\\wsl$\Ubuntu-20.04\var\www\jardel\laravel-rpps-livewire-version\app\Modules\Admin\routes" />
       <recent name="\\wsl$\Ubuntu-20.04\var\www\jardel\laravel-rpps-livewire-version\app\Modules\Admin\App\Http\Livewire" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="\\wsl$\Ubuntu-20.04\var\www\jardel\laravel-rpps-livewire-version\public_html\css" />
-      <recent name="\\wsl$\Ubuntu-20.04\var\www\jardel\laravel-rpps-livewire-version\app\Modules" />
-      <recent name="\\wsl$\Ubuntu-20.04\var\www\jardel\laravel-rpps-livewire-version\resources\views\layouts" />
-      <recent name="\\wsl$\Ubuntu-20.04\var\www\jardel\laravel-rpps-livewire-version\app\Modules\Admin\resources\views\livewire" />
-      <recent name="\\wsl$\Ubuntu-20.04\var\www\jardel\laravel-rpps-livewire-version\app\Http\Controllers\Livewire" />
     </key>
   </component>
   <component name="RunManager">
@@ -165,6 +165,7 @@
       <option name="presentableId" value="Default" />
       <updated>1613742263164</updated>
       <workItem from="1613742264220" duration="11402000" />
+      <workItem from="1613762327981" duration="5512000" />
     </task>
     <servers />
   </component>
@@ -172,14 +173,18 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="399" y="128" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1613780782566">
+      <screen x="0" y="0" width="1600" height="984" />
+    </state>
+    <state x="399" y="128" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1600.0.1280.680/0.0.1600.984@0.0.1600.984" timestamp="1613780782566" />
     <state x="256" y="116" key="NewPhpClassDialog" timestamp="1613744236042">
       <screen x="0" y="0" width="1600" height="984" />
     </state>
     <state x="256" y="116" key="NewPhpClassDialog/1600.0.1280.680/0.0.1600.984@0.0.1600.984" timestamp="1613744236042" />
-    <state x="562" y="381" key="NewPhpFileDialog" timestamp="1613756012418">
+    <state x="562" y="381" key="NewPhpFileDialog" timestamp="1613762985948">
       <screen x="0" y="0" width="1600" height="984" />
     </state>
-    <state x="562" y="381" key="NewPhpFileDialog/1600.0.1280.680/0.0.1600.984@0.0.1600.984" timestamp="1613756012418" />
+    <state x="562" y="381" key="NewPhpFileDialog/1600.0.1280.680/0.0.1600.984@0.0.1600.984" timestamp="1613762985948" />
     <state width="746" height="596" key="SwitcherDM" timestamp="1613760770213">
       <screen x="0" y="0" width="1600" height="984" />
     </state>

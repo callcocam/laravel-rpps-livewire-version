@@ -7,7 +7,7 @@
 
 namespace App\Modules\Admin\App\Http\Livewire\SubMenus;
 
-use SIGA\Models\LandlordSubMenu;
+use App\Modules\Admin\App\Models\SubMenu;
 use SIGA\Table\TableComponent;
 use Illuminate\Database\Eloquent\Builder;
 use SIGA\Table\Views\Column;
@@ -17,7 +17,7 @@ class ListComponent extends TableComponent
 
     public function query(): Builder
     {
-        return LandlordSubMenu::query();
+        return SubMenu::query();
     }
 
     public function columns(): array
@@ -26,9 +26,9 @@ class ListComponent extends TableComponent
        return [
            Column::make('Name')->sortable()->searchable(),
            Column::make('slug')->sortable()->searchable(),
-           Column::make('Menu','sub_menu_id')->format(function ($model){
-               if($model->sub_menu){
-                   return $model->sub_menu->name;
+           Column::make('Menu','parent')->format(function ($model){
+               if($model->submenu){
+                   return $model->submenu->name;
                }
            }),
            Column::make('action')->actions('sub-menus')
@@ -37,7 +37,7 @@ class ListComponent extends TableComponent
 
     public function layout(): string
     {
-        return 'admin::layouts.landlord';
+        return 'admin::layouts.admin';
     }
 
     public function route()

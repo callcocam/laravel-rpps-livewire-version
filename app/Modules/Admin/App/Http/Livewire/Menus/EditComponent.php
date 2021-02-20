@@ -7,17 +7,16 @@
 
 namespace App\Modules\Admin\App\Http\Livewire\Menus;
 
+use App\Modules\Admin\App\Models\Menu;
 use SIGA\Form\Fields\Text;
 use SIGA\Form\FormComponent;
-use Illuminate\Database\Eloquent\Builder;
-use SIGA\Models\LandlordMenu;
 
 class EditComponent extends FormComponent
 {
 
         protected $route = "menus";
 
-        public function mount(LandlordMenu $menu){
+        public function mount(Menu $menu){
             $this->setFormProperties($menu);
         }
         /**

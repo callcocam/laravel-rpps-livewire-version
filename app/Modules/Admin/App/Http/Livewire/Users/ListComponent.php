@@ -5,9 +5,9 @@
  * https://www.sigasmart.com.br
  */
 
-namespace App\Modules\Admin\App\Http\Livewire\Menus;
+namespace App\Modules\Admin\App\Http\Livewire\Users;
 
-use App\Modules\Admin\App\Models\Menu;
+use App\Models\User;
 use SIGA\Table\TableComponent;
 use Illuminate\Database\Eloquent\Builder;
 use SIGA\Table\Views\Column;
@@ -17,15 +17,14 @@ class ListComponent extends TableComponent
 
     public function query(): Builder
     {
-        return Menu::query();
+        return User::query();
     }
 
     public function columns(): array
     {
        return [
-           Column::make('name')->sortable()->searchable(),
-           Column::make('slug'),
-           Column::make('action')->actions('menus')
+           Column::make('name'),
+           Column::make('actions')->actions('users')
        ];
     }
 
@@ -36,6 +35,6 @@ class ListComponent extends TableComponent
 
     public function route()
     {
-        return "menus";
+        return "users";
     }
 }

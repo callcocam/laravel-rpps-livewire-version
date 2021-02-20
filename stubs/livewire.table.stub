@@ -7,29 +7,35 @@
 
 namespace [namespace];
 
+use App\Models\[model];
 use SIGA\Table\TableComponent;
 use Illuminate\Database\Eloquent\Builder;
+use SIGA\Table\Views\Column;
 
 class [class] extends TableComponent
 {
 
     public function query(): Builder
     {
-        // TODO: Implement query() method.
+      return [model]::query();
     }
 
     public function columns(): array
     {
-       return [];
+       return [
+           Column::make('id'),
+           //
+           Column::make('action')->actions($this->route())
+       ];
     }
 
     public function layout(): string
     {
-        return 'admin::layouts.app';
+        return 'layouts.app';
     }
 
     public function route()
     {
-        return "[route]";
+        return "[routes]";
     }
 }

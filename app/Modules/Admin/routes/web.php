@@ -42,28 +42,31 @@ Route::get('/logout', function (\Illuminate\Http\Request $request) {
 })->name('logout');
 
 
-Route::get('icons', \App\Modules\Admin\App\Http\Livewire\Icon::class)->name('icons.index');
-Route::get('icons-brands', \App\Modules\Admin\App\Http\Livewire\IconBrands::class)->name('icons-brands.index');
+Route::get('icons', \App\Modules\Admin\App\Http\Livewire\Utils\Icons::class)->name('icons-admin-index');
 
-Route::get('menus', \App\Modules\Admin\App\Http\Livewire\Menus\ListComponent::class)->name('menus.index');
-Route::get('menus/create', \App\Modules\Admin\App\Http\Livewire\Menus\CreateComponent::class)->name('menus.create');
-Route::get('menus/{menu}/edit', \App\Modules\Admin\App\Http\Livewire\Menus\EditComponent::class)->name('menus.edit');
+Route::get('users', \App\Modules\Admin\App\Http\Livewire\Users\ListComponent::class)->name('users-admin-stores');
+//Route::get('users/create', \App\Modules\Admin\App\Http\Livewire\Users\CreateComponent::class)->name('users-admin-create');
+//Route::get('users/{user}/edit', \App\Modules\Admin\App\Http\Livewire\Users\EditComponent::class)->name('users-admin-edit');
 
-
-Route::get('sub-menus', \App\Modules\Admin\App\Http\Livewire\SubMenus\ListComponent::class)->name('sub-menus.index');
-Route::get('sub-menus/manager/menus', \App\Modules\Admin\App\Http\Livewire\SubMenus\ManagerComponent::class)->name('sub-menus.manager');
-Route::get('sub-menus/create', \App\Modules\Admin\App\Http\Livewire\SubMenus\CreateComponent::class)->name('sub-menus.create');
-Route::get('sub-menus/{submenu}/edit', \App\Modules\Admin\App\Http\Livewire\SubMenus\EditComponent::class)->name('sub-menus.edit');
+Route::get('menus', \App\Modules\Admin\App\Http\Livewire\Menus\ListComponent::class)->name('menus-admin-stores');
+Route::get('menus/create', \App\Modules\Admin\App\Http\Livewire\Menus\CreateComponent::class)->name('menus-admin-create');
+Route::get('menus/{menu}/edit', \App\Modules\Admin\App\Http\Livewire\Menus\EditComponent::class)->name('menus-admin-edit');
 
 
-Route::get('companies', \App\Modules\Admin\App\Http\Livewire\Companies\ListComponent::class)->name('companies.index');
-Route::get('companies/create', \App\Modules\Admin\App\Http\Livewire\Companies\CreateComponent::class)->name('companies.create');
-Route::get('companies/{company}/edit', \App\Modules\Admin\App\Http\Livewire\Companies\EditComponent::class)->name('companies.edit');
+Route::get('sub-menus', \App\Modules\Admin\App\Http\Livewire\SubMenus\ListComponent::class)->name('sub-menus-admin-stores');
+Route::get('sub-menus/manager/menus', \App\Modules\Admin\App\Http\Livewire\SubMenus\ManagerComponent::class)->name('sub-menus-admin-manager');
+Route::get('sub-menus/create', \App\Modules\Admin\App\Http\Livewire\SubMenus\CreateComponent::class)->name('sub-menus-admin-create');
+Route::get('sub-menus/{submenu}/edit', \App\Modules\Admin\App\Http\Livewire\SubMenus\EditComponent::class)->name('sub-menus-admin-edit');
 
 
-Route::get('roles', \App\Modules\Admin\App\Http\Livewire\Roles\ListComponent::class)->name('roles.index');
-Route::get('roles/create', \App\Modules\Admin\App\Http\Livewire\Roles\CreateComponent::class)->name('roles.create');
-Route::get('roles/{role}/edit', \App\Modules\Admin\App\Http\Livewire\Roles\EditComponent::class)->name('roles.edit');
+Route::get('companies', \App\Modules\Admin\App\Http\Livewire\Companies\ListComponent::class)->name('companies-admin-stores');
+Route::get('companies/create', \App\Modules\Admin\App\Http\Livewire\Companies\CreateComponent::class)->name('companies-admin-create');
+Route::get('companies/{company}/edit', \App\Modules\Admin\App\Http\Livewire\Companies\EditComponent::class)->name('companies-admin-edit');
 
 
-Route::get('permissions', \App\Modules\Admin\App\Http\Livewire\Permissions\ListComponent::class)->name('permissions.index');
+Route::get('roles', \App\Modules\Admin\App\Http\Livewire\Roles\ListComponent::class)->name('roles-admin-stores');
+Route::get('roles/create', \App\Modules\Admin\App\Http\Livewire\Roles\CreateComponent::class)->name('roles-admin-create');
+Route::get('roles/{role}/edit', \App\Modules\Admin\App\Http\Livewire\Roles\EditComponent::class)->name('roles-admin-edit');
+
+
+Route::get('permissions', \App\Modules\Admin\App\Http\Livewire\Permissions\ListComponent::class)->name('permissions-admin-stores');

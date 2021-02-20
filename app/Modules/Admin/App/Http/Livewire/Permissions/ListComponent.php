@@ -29,7 +29,7 @@ class ListComponent extends TableComponent
 
     public function layout(): string
     {
-        return 'admin::layouts.landlord';
+        return 'admin::layouts.admin';
     }
 
     public function route()

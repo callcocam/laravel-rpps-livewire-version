@@ -170,6 +170,7 @@ return [
          * Application Service Providers...
          */
         \SIGA\Tenant\TenantServiceProvider::class,
+        \SIGA\Acl\AclServiceProvider::class,
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
