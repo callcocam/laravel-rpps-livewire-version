@@ -41,6 +41,7 @@
 </head>
 
 <body class="c-app">
+@livewire('container')
 @livewire('lv-admin::shared.navbuilder')
     <div class="c-wrapper">
         @livewire('lv-admin::shared.header')
@@ -55,5 +56,6 @@
 <script src="{{ asset('js/coreui.bundle.min.js') }}"></script>
 <script src="{{ asset('js/coreui-utils.js') }}"></script>
 @livewireScripts
+<script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

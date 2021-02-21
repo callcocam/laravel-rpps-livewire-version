@@ -66,7 +66,6 @@ trait HasMultiSelect
     protected function isMultSelectSearch($field)
     {
 
-
         if ($this->MultselectSearch && Arr::exists($this->MultselectSearch, $field)) {
             return trim($this->MultselectSearch[$field]);
         }

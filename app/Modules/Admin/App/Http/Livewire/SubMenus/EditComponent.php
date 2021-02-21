@@ -9,8 +9,10 @@ namespace App\Modules\Admin\App\Http\Livewire\SubMenus;
 
 use App\Modules\Admin\App\Models\Menu;
 use App\Modules\Admin\App\Models\SubMenu;
+use App\Modules\Helpers\IconsHelper;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Str;
+use SIGA\Form\Fields\Radio;
 use SIGA\Form\Fields\Select;
 use SIGA\Form\Fields\Text;
 use SIGA\Form\FormComponent;
@@ -35,32 +37,32 @@ class EditComponent extends FormComponent
         $submenu = SubMenu::query();
         $menu = Menu::query();
         return [
+            Radio::make('assets')->options([
+                "link",
+                "dropdown",
+                "title",
+            ])->inline(),
             Text::make('Name'),
             Text::make('Slug'),
             Select::make('Menu', 'menu_id')->target($menu, $this->isSingleSelectSearch('menu_id')),
             Select::make('Sub Menus', 'parent')->target($submenu, $this->isSingleSelectSearch('parent')),
             Text::make('Link'),
-            Select::make('Icon')->options($this->icons()),
+            Select::make('Icone')->options($this->icons()),
         ];
+    }
+
+    public function success()
+    {
+        if(parent::success()){
+            $this->emit('loadMenus', true);
+        }
     }
 
     protected function icons()
     {
-        $data = [];
-        $fileSystem = new Filesystem();
-        $path = resource_path('assets/icons');
-        $files = collect($fileSystem->allFiles($path));
-        $list = $files->map(function (SplFileInfo $file) {
-            if (!$file->getRelativePath()) {
-                $text = sprintf("cil-%s", Str::beforeLast($file->getBasename(), '.'));
-            } else {
-                $text = null;
-            }
-            if ($value = $this->isMultSelectSearch( 'icon')) {
-                return Str::contains($text, $value) ? $text : null;
-            }
-            return $text;
-        })->whereNotNull()->slice(0, 12);
+        $data=[];
+
+        $list = IconsHelper::make()->collect($this->isSingleSelectSearch('icone'));
 
         foreach ($list as $value) {
             $data[$value] = $value;

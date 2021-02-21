@@ -26,7 +26,7 @@ class RenderFromDatabaseData
     private function addLink($data)
     {
         if ($data->parent === NULL) {
-            $this->mb->addLink($data->id, $data->name, $data->slug, $data->icon, 'coreui', $data->ordering);
+            $this->mb->addLink($data->id, $data->name, $data->slug, $data->icone, 'coreui', $data->ordering);
         }
     }
 
@@ -38,7 +38,7 @@ class RenderFromDatabaseData
                 if ($sub_menu->assets === 'dropdown') {
                     $this->addDropdown($sub_menu);
                 } elseif ($sub_menu->assets === 'link') {
-                    $this->mb->addLink($sub_menu->id, $sub_menu->name, $sub_menu->slug, $sub_menu->icon, 'coreui', $sub_menu->ordering);
+                    $this->mb->addLink($sub_menu->id, $sub_menu->name, $sub_menu->slug, $sub_menu->icone, 'coreui', $sub_menu->ordering);
                 } else {
                     $this->addTitle($sub_menu);
                 }
@@ -48,7 +48,7 @@ class RenderFromDatabaseData
 
     private function addDropdown($data)
     {
-        $this->mb->beginDropdown($data->id, $data->name, $data->icon, 'coreui', $data->ordering);
+        $this->mb->beginDropdown($data->id, $data->name, $data->icone, 'coreui', $data->ordering);
 
         if($data->submenus){
 

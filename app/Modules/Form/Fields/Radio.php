@@ -14,7 +14,7 @@ use Illuminate\Support\Str;
 class Radio extends BaseField
 {
 
-    protected $class = 'mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md';
+    protected $class = 'form-check-input';
 
     /**
      * Field constructor.
@@ -40,4 +40,10 @@ class Radio extends BaseField
         return new static($label, $name);
     }
 
+    public function inline(){
+
+        $this->view('radio-inline');
+
+        return $this;
+    }
 }

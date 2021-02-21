@@ -17,6 +17,7 @@ class Checkbox extends BaseField
     protected $label;
     protected $key;
     protected $class = 'mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md';
+    protected $placeholder;
 
     /**
      * Field constructor.
@@ -26,7 +27,7 @@ class Checkbox extends BaseField
     public function __construct($label, $name)
     {
         parent::__construct($label, $name);
-        $this->type( 'checkbox');
+        $this->type('checkbox');
         $this->view('checkbox');
 
     }
@@ -51,6 +52,12 @@ class Checkbox extends BaseField
     public static function make($label, $name = null)
     {
         return new static($label, $name);
+    }
+
+    public function placeholder($placeholder)
+    {
+        $this->placeholder = $placeholder;
+        return $this;
     }
 
 }

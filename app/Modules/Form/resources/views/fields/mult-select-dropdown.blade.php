@@ -17,7 +17,7 @@
             <input wire:model="MultselectSearch.{{ $field->name }}" class="c-multi-select-search" placeholder="Search"
                    autofocus>
             @if($field->options)
-                <div class="c-multi-select-options">
+                <div class="c-multi-select-options overflow-y-auto h-100">
                     @foreach($field->options as $value => $label)
                         <div class="c-multi-select-option {{ $this->isSelected($value) }}"
                              wire:click="setMultSelectValue('{{ $value }}','{{$label}}','{{$field->name}}')"

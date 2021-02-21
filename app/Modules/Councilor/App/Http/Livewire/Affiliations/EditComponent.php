@@ -5,21 +5,21 @@
  * https://www.sigasmart.com.br
  */
 
-namespace App\Modules\Admin\App\Http\Livewire\Users;
+namespace App\Modules\Councilor\App\Http\Livewire\Affiliations;
 
-use App\Models\User;
-use SIGA\Form\Fields\Checkbox;
+
+use App\Modules\Councilor\App\Models\Affiliation;
 use SIGA\Form\Fields\Text;
 use SIGA\Form\FormComponent;
 
 class EditComponent extends FormComponent
 {
 
-        protected $route = "users";
+        protected $route = "affiliations";
 
-        public function mount(User $user)
+        public function mount(Affiliation $affiliation)
         {
-           $this->setFormProperties($user);
+           $this->setFormProperties($affiliation);
         }
 
         /**
@@ -28,8 +28,7 @@ class EditComponent extends FormComponent
         public function fields()
         {
             return [
-                Text::make('Name'),
-
+                Text::make('Name')
             ];
         }
 }

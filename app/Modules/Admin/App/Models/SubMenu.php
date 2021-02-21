@@ -13,7 +13,15 @@ class SubMenu extends AbstractModel
 {
     use HasFactory;
 
+    protected $guarded = ['id'];
+
     public function submenus(){
         return $this->hasMany(SubMenu::class, 'parent');
+    }
+
+
+    protected  function slugTo()
+    {
+        return false;
     }
 }

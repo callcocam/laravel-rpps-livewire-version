@@ -5,25 +5,26 @@
  * https://www.sigasmart.com.br
  */
 
-namespace [namespace];
+namespace App\Modules\Councilor\App\Http\Livewire\Affiliations;
 
-use App\Models\[model];
+
+use App\Modules\Councilor\App\Models\Affiliation;
 use SIGA\Table\TableComponent;
 use Illuminate\Database\Eloquent\Builder;
 use SIGA\Table\Views\Column;
 
-class [class] extends TableComponent
+class ListComponent extends TableComponent
 {
 
     public function query(): Builder
     {
-      return [model]::query();
+      return Affiliation::query();
     }
 
     public function columns(): array
     {
        return [
-           Column::make('id'),
+           Column::make('name'),
            //
            Column::make('action')->actions($this->route())
        ];
@@ -36,6 +37,6 @@ class [class] extends TableComponent
 
     public function route()
     {
-        return "[routes]";
+        return "affiliations";
     }
 }

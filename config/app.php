@@ -182,6 +182,8 @@ return [
         \SIGA\Flash\FlashServiceProvider::class,
         \App\Modules\Admin\App\Providers\AdminServiceProvider::class,
         \App\Modules\Admin\App\Providers\RouteServiceProvider::class,
+        \App\Modules\Councilor\App\Providers\CouncilorServiceProvider::class,
+        \App\Modules\Councilor\App\Providers\RouterServiceProvider::class,
 
     ],
 

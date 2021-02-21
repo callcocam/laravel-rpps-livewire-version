@@ -7,7 +7,7 @@
             @endisset
             <input wire:model="SingleselectSearch.{{ $field->name }}" class="c-multi-select-search" placeholder="Search" autocomplete="off">
             @if($field->options)
-                <div class="c-multi-select-options" @click="open = false">
+                <div class="c-multi-select-options  overflow-auto" style="height: 200px;" @click="open = false">
                     @foreach($field->options as $value => $label)
                         <div class="c-multi-select-option {{ $this->isSingleSelected($value,$field->name) }}"
                              wire:click="setSingleSelectValue('{{ $value }}','{{ $label }}','{{$field->name}}')"

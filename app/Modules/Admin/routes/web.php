@@ -45,8 +45,8 @@ Route::get('/logout', function (\Illuminate\Http\Request $request) {
 Route::get('icons', \App\Modules\Admin\App\Http\Livewire\Utils\Icons::class)->name('icons-admin-index');
 
 Route::get('users', \App\Modules\Admin\App\Http\Livewire\Users\ListComponent::class)->name('users-admin-stores');
-//Route::get('users/create', \App\Modules\Admin\App\Http\Livewire\Users\CreateComponent::class)->name('users-admin-create');
-//Route::get('users/{user}/edit', \App\Modules\Admin\App\Http\Livewire\Users\EditComponent::class)->name('users-admin-edit');
+Route::get('users/create', \App\Modules\Admin\App\Http\Livewire\Users\CreateComponent::class)->name('users-admin-create');
+Route::get('users/{user}/edit', \App\Modules\Admin\App\Http\Livewire\Users\EditComponent::class)->name('users-admin-edit');
 
 Route::get('menus', \App\Modules\Admin\App\Http\Livewire\Menus\ListComponent::class)->name('menus-admin-stores');
 Route::get('menus/create', \App\Modules\Admin\App\Http\Livewire\Menus\CreateComponent::class)->name('menus-admin-create');

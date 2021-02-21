@@ -26,6 +26,7 @@ class ListComponent extends TableComponent
        return [
            Column::make('Name')->sortable()->searchable(),
            Column::make('slug')->sortable()->searchable(),
+           Column::make('Icone')->sortable()->searchable(),
            Column::make('Menu','parent')->format(function ($model){
                if($model->submenu){
                    return $model->submenu->name;

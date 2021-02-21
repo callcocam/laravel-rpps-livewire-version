@@ -1,7 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a0ff8f3-1807-4dfb-b381-e8ccd23af128" name="Default Changelist" comment="" />
+    <list default="true" id="0a0ff8f3-1807-4dfb-b381-e8ccd23af128" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Modules/Councilor/App/Providers/CouncilorServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Modules/Councilor/App/Providers/RouterServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Modules/Councilor/routes/api.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Modules/Councilor/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Modules/Admin/App/Http/Livewire/Shared/NavBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Modules/Admin/App/Http/Livewire/Shared/NavBuilder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Modules/Admin/App/Http/Livewire/SubMenus/EditComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Modules/Admin/App/Http/Livewire/SubMenus/EditComponent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Modules/Admin/App/Http/Livewire/SubMenus/ListComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Modules/Admin/App/Http/Livewire/SubMenus/ListComponent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Modules/Admin/App/Http/Livewire/Users/EditComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Modules/Admin/App/Http/Livewire/Users/EditComponent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Modules/Admin/App/Http/Livewire/Utils/Icons.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Modules/Admin/App/Http/Livewire/Utils/Icons.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Modules/Admin/App/Models/SubMenu.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Modules/Admin/App/Models/SubMenu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Modules/Admin/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Modules/Admin/resources/views/layouts/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Modules/Admin/resources/views/livewire/shared/nav-builder.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Modules/Admin/resources/views/livewire/shared/nav-builder.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Modules/Admin/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Modules/Admin/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Modules/Form/Fields/Checkbox.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Modules/Form/Fields/Checkbox.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Modules/Form/Fields/Radio.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Modules/Form/Fields/Radio.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Modules/Form/Traits/HasMultiSelect.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Modules/Form/Traits/HasMultiSelect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Modules/Form/resources/views/fields/mult-select-dropdown.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Modules/Form/resources/views/fields/mult-select-dropdown.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Modules/Form/resources/views/fields/radio.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Modules/Form/resources/views/fields/radio.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Modules/Form/resources/views/fields/select-dropdown.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Modules/Form/resources/views/fields/select-dropdown.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Modules/MenuBuilder/RenderFromDatabaseData.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Modules/MenuBuilder/RenderFromDatabaseData.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stubs/livewire.table.stub" beforeDir="false" afterPath="$PROJECT_DIR$/stubs/livewire.table.stub" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stubs/model.stub" beforeDir="false" afterPath="$PROJECT_DIR$/stubs/model.stub" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +53,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -130,17 +176,17 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Modules/Form/resources/views/fields" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu-20.04\var\www\jardel\laravel-rpps-livewire-version\app\Modules\Form\resources\views\fields" />
       <recent name="\\wsl$\Ubuntu-20.04\var\www\jardel\laravel-rpps-livewire-version" />
       <recent name="\\wsl$\Ubuntu-20.04\var\www\jardel\laravel-rpps-livewire-version\app\Modules\Console\Commands" />
       <recent name="\\wsl$\Ubuntu-20.04\var\www\jardel\laravel-rpps-livewire-version\resources\views\components" />
       <recent name="\\wsl$\Ubuntu-20.04\var\www\jardel\laravel-rpps-livewire-version\app\Modules\Livewire" />
-      <recent name="\\wsl$\Ubuntu-20.04\var\www\jardel\laravel-rpps-livewire-version\app\Modules\Admin\App\Http\Livewire" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="\\wsl$\Ubuntu-20.04\var\www\jardel\laravel-rpps-livewire-version\resources\views\layouts" />
@@ -165,29 +211,44 @@
       <option name="presentableId" value="Default" />
       <updated>1613742263164</updated>
       <workItem from="1613742264220" duration="11402000" />
-      <workItem from="1613762327981" duration="5512000" />
+      <workItem from="1613762327981" duration="15588000" />
+      <workItem from="1613842769494" duration="2197000" />
+      <workItem from="1613915671079" duration="925000" />
+      <workItem from="1613929529374" duration="251000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="399" y="128" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1613780782566">
+    <state x="399" y="128" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1613843150227">
       <screen x="0" y="0" width="1600" height="984" />
     </state>
-    <state x="399" y="128" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1600.0.1280.680/0.0.1600.984@0.0.1600.984" timestamp="1613780782566" />
-    <state x="256" y="116" key="NewPhpClassDialog" timestamp="1613744236042">
+    <state x="399" y="128" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1600.0.1280.680/0.0.1600.984@0.0.1600.984" timestamp="1613843150227" />
+    <state x="256" y="116" key="NewPhpClassDialog" timestamp="1613843120582">
       <screen x="0" y="0" width="1600" height="984" />
     </state>
-    <state x="256" y="116" key="NewPhpClassDialog/1600.0.1280.680/0.0.1600.984@0.0.1600.984" timestamp="1613744236042" />
-    <state x="562" y="381" key="NewPhpFileDialog" timestamp="1613762985948">
+    <state x="256" y="116" key="NewPhpClassDialog/1600.0.1280.680/0.0.1600.984@0.0.1600.984" timestamp="1613843120582" />
+    <state x="562" y="381" key="NewPhpFileDialog" timestamp="1613843297675">
       <screen x="0" y="0" width="1600" height="984" />
     </state>
-    <state x="562" y="381" key="NewPhpFileDialog/1600.0.1280.680/0.0.1600.984@0.0.1600.984" timestamp="1613762985948" />
-    <state width="746" height="596" key="SwitcherDM" timestamp="1613760770213">
+    <state x="562" y="381" key="NewPhpFileDialog/1600.0.1280.680/0.0.1600.984@0.0.1600.984" timestamp="1613843297675" />
+    <state width="746" height="596" key="SwitcherDM" timestamp="1613790042510">
       <screen x="0" y="0" width="1600" height="984" />
     </state>
-    <state width="746" height="596" key="SwitcherDM/1600.0.1280.680/0.0.1600.984@0.0.1600.984" timestamp="1613760770213" />
+    <state width="746" height="596" key="SwitcherDM/1600.0.1280.680/0.0.1600.984@0.0.1600.984" timestamp="1613790042510" />
   </component>
 </project>

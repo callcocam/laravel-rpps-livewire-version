@@ -29,7 +29,7 @@
                             <a class="c-sidebar-nav-link" href="{{ url($menuel['href']) }}">
                                 @if($menuel['hasIcon'] === true)
                                     @if($menuel['iconType'] === 'coreui')
-                                        <i class="{{ $menuel['icon'] }} c-sidebar-nav-icon"></i>
+                                        <i class="cil-{{ $menuel['icon'] }} c-sidebar-nav-icon"></i>
                                     @endif
                                 @endif
                                 {{ $menuel['name'] }}
@@ -40,7 +40,7 @@
                     <li class="c-sidebar-nav-dropdown">
                         <a class="c-sidebar-nav-dropdown-toggle" href="#">
                             @isset($menuel['icon'])
-                             <i class="c-sidebar-nav-icon {{ $menuel['icon'] }}"></i>
+                             <i class="c-sidebar-nav-icon cil-{{ $menuel['icon'] }}"></i>
                             @endisset
                             {{  $menuel['name'] }}
                         </a>

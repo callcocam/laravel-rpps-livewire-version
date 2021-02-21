@@ -4,13 +4,13 @@
  * User: callcocam@gmail.com, contato@sigasmart.com.br
  * https://www.sigasmart.com.br
  */
-namespace {{ namespace }};
+namespace App\Modules\Councilor\App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use SIGA\Models\AbstractModel;
 use SIGA\Scopes\UuidGenerate;
 
-class {{ class }} extends AbstractModel
+class Affiliation extends AbstractModel
 {
     use HasFactory, UuidGenerate;
 
