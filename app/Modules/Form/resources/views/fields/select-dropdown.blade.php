@@ -1,11 +1,11 @@
 <div class="form-group row" x-data="{open: false}" @click.away="open = false" @close.stop="open = false">
-    <label class="col-md-3 col-form-label" for="{{ $field->name }}"> {{ $field->label }}</label>
+    @include('laravel-livewire-forms::fields.label')
     <div class="col-md-9" @click="open=true">
         <div class="c-multi-select" :class="{'c-show':open}">
             @isset($this->SingleselectSelected[$field->name])
-                <span class="c-multi-select-selection mr-4">{{ $this->SingleselectSelected[$field->name] }}</span>
+                <span class="c-multi-select-selection mr-4" x-show="!open">{{ $this->SingleselectSelected[$field->name] }}</span>
             @endisset
-            <input wire:model="SingleselectSearch.{{ $field->name }}" class="c-multi-select-search" placeholder="Search" autocomplete="off">
+            <input wire:model="SingleselectSearch.{{ $field->name }}" class="c-multi-select-search" autocomplete="off">
             @if($field->options)
                 <div class="c-multi-select-options  overflow-auto" style="height: 200px;" @click="open = false">
                     @foreach($field->options as $value => $label)

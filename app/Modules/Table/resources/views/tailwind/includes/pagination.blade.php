@@ -1,5 +1,5 @@
 @if ($paginationEnabled)
-    <div class="container mx-auto my-3 py-3 px-5">
+    <div class="container mx-auto  py-3 px-5 bg-white">
         {{ $models->links() }}
     </div>
 @endif

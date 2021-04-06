@@ -1,22 +1,12 @@
 @foreach($models as $model)
-    <tr  class="{{ $this->setTableRowClass($model) }}"
-        id="{{ $this->setTableRowId($model) }}"
-        @foreach ($this->setTableRowAttributes($model) as $key => $value)
-            {{ $key }}="{{ $value }}"
-        @endforeach
+    <tr {{ $this->merge($this->setTableRowAttributes($model)) }}
         @if ($this->getTableRowUrl($model))
             onclick="window.location = '{{ $this->getTableRowUrl($model) }}';"
             style="cursor: pointer"
         @endif >
             @foreach($columns as $column)
                 @if ($column->isVisible())
-                    <td
-                        class="{{ $this->setTableDataClass($column->getAttribute(), data_get($model, $column->getAttribute())) }}"
-                        id="{{ $this->setTableDataId($column->getAttribute(), data_get($model, $column->getAttribute())) }}"
-                    @foreach ($this->setTableDataAttributes($column->getAttribute(), data_get($model, $column->getAttribute())) as $key => $value)
-                        {{ $key }}="{{ $value }}"
-                    @endforeach
-                    >
+                    <td {{ $this->merge($this->setTableDataAttributes($column->getAttribute(), data_get($model, $column->getAttribute()))) }} >
                         @if ($column->isFormatted())
                                 @if ($column->isRaw())
                                     {!! $column->formatted($model, $column) !!}

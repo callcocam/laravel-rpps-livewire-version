@@ -10,7 +10,7 @@ namespace SIGA\Table\Traits;
 
 trait Kill
 {
-    public $confirming;
+    protected $confirming;
 
     public function confirmDelete($id)
     {
@@ -27,11 +27,15 @@ trait Kill
         try {
             $this->query()->find($id)->delete();
             $this->confirming = null;
-            flash()->overlay("O registro foi excluido com sucesso!!", 'Ação de excluir')->livewire($this);
+            flash("O registro foi excluido com sucesso!!", 'success')->dismissable()->livewire($this);
             return ;
         }catch (\PDOException $exception){
-            flash()->overlay( $exception->getMessage(),'Ação de excluir')->livewire($this);
+            flash(  $exception->getMessage(),'danger')->dismissable()->livewire($this);
             $this->confirming = null;
         }
+    }
+
+    public function getConfirmingProperty(){
+        return $this->confirming;
     }
 }

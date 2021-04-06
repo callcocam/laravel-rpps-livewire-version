@@ -4,7 +4,7 @@
 {{-- * https://www.sigasmart.com.br--}}
 {{-- */--}}
 <div class="form-group row">
-    <label class="col-md-3 col-form-label" for="{{ $field->name }}"> {{ $field->label }}</label>
+    @include('laravel-livewire-forms::fields.label')
     <div class="col-md-9">
        <div class="row">
            <div class="col-md-8">
@@ -18,7 +18,7 @@
            </div>
            <div class="col-md-4">
                @if(!is_array($form_data[$field->name]))
-                   <button type="button" class="btn btn-danger btn-block rounded-full" wire:click="deleteUploadUrl('{{$field->name}}')" ><x-c-icon icon="trash"/>{{ _("Delete poto") }}</button>
+                   <button type="button" class="btn btn-danger btn-block rounded-full" wire:click="deleteUploadUrl('{{$field->name}}')" ><x-c-icon icon="trash"/>@lang('form.delete-photo')</button>
                @endif
            </div>
        </div>

@@ -4,11 +4,12 @@
 {{-- * https://www.sigasmart.com.br--}}
 {{-- */--}}
 <div class="form-group row">
-    <label class="col-md-3 col-form-label"> {{ $field->label }}</label>
+    @include('laravel-livewire-forms::fields.label')
     <div class="col-md-9 col-form-label">
         @foreach($field->options as $value => $label)
             <div class="form-check">
                 <input wire:model.lazy="{{ $field->key }}" {{ $field->merge([
+                                    'value'=>$value,
                                     'class'=>$field->class,
                                     'id'=> $field->name . '.' . $loop->index
                     ]) }}>

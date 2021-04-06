@@ -17,12 +17,13 @@ class ComponentParser extends ComponentParserAlias
 
     protected $templateStub = 'table';
     protected $model;
+    protected $modelNameSpace = "App\Models";
     protected $routes;
 
     public function __construct($classNamespace, $viewPath, $rawCommand)
     {
-        $this->routes = Str::slug( Str::beforeLast($rawCommand,'/'));
-        $this->model = Str::singular( Str::beforeLast($rawCommand,'/'));
+        $this->routes = Str::slug(Str::beforeLast($rawCommand, '/'));
+        $this->model = Str::singular(Str::beforeLast($rawCommand, '/'));
 
         parent::__construct($classNamespace, $viewPath, $rawCommand);
     }
@@ -54,11 +55,18 @@ class ComponentParser extends ComponentParserAlias
         if ($inline) {
             $template = preg_replace('/\[quote\]/', $this->wisdomOfTheTao(), $template);
         }
-
+        if (Str::contains($this->classNamespace(), 'Http\Livewire')) {
+            $nameSpace = str_replace('Http\Livewire', 'Models', $this->classNamespace());
+            $this->modelNameSpace = substr($nameSpace,0, Str::length($nameSpace)-1);
+        }
+        else{
+            $this->modelNameSpace = sprintf("%s\%s", $this->modelNameSpace, $this->model);
+        }
         return str_replace(
-            ['[namespace]', '[model]', '[class]', '[view]', '[param]', '[routes]'],
-            [ $this->classNamespace(),$this->model, $this->className(), $this->viewName(), Str::slug($this->model), $this->routes],
+            ['[namespace]', '[modelNameSpace]', '[model]', '[class]', '[view]', '[param]', '[routes]'],
+            [$this->classNamespace(), $this->modelNameSpace, $this->model, $this->className(), $this->viewName(), Str::slug($this->model), $this->routes],
             $template
         );
     }
+
 }

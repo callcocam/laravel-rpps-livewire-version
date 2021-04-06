@@ -29,8 +29,12 @@ class MenuBuilder
         $menu = &$menu[count($menu)-1];
         while(is_array($menu)){
             if($z == $this->dropdownDeep - $offset){
-                array_push($menu['elements'], $element);
-                $result = true;
+
+               if (isset($menu['elements'])){
+                   array_push($menu['elements'], $element);
+                   $result = true;
+               }
+
                 break;
             }
             $menu = &$menu['elements'][count($menu['elements'])-1];

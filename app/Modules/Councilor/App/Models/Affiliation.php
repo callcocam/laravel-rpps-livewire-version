@@ -12,7 +12,7 @@ use SIGA\Scopes\UuidGenerate;
 
 class Affiliation extends AbstractModel
 {
-    use HasFactory, UuidGenerate;
+    use HasFactory;
 
     protected $guarded = ['id'];
 }

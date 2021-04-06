@@ -7,7 +7,6 @@
 
 namespace App\Modules\Councilor\App\Http\Livewire\Affiliations;
 
-
 use App\Modules\Councilor\App\Models\Affiliation;
 use SIGA\Form\Fields\Text;
 use SIGA\Form\FormComponent;

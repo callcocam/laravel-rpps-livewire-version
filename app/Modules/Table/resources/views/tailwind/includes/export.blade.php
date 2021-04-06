@@ -1,6 +1,6 @@
 @if (count($exports))
     <div class="dropdown table-export">
-        <button class="dropdown-toggle {{ $this->getOption('bootstrap.classes.buttons.export') }}" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="dropdown-toggle {{ $this->getOption('tailwind.classes.buttons.export') }}" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             @lang('strings.export')
         </button>
 

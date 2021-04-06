@@ -17,6 +17,7 @@ class LivewireTablesServiceProvide  extends ServiceProvider
      */
     public function boot()
     {
+        $this->mergeConfigFrom(sprintf("%s/config/laravel-livewire-tables.php", __DIR__), 'laravel-livewire-tables');
 
         $this->loadTranslationsFrom(sprintf('%s/resources/lang', __DIR__), 'laravel-livewire-tables');
 

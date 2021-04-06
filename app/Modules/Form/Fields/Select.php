@@ -74,7 +74,7 @@ class Select extends BaseField
             $query->where($label, 'like', '%' . $where . '%');
         }
 
-        $this->options($query->pluck($key, $label)->toArray());
+        $this->options($query->pluck($key, $label)->toArray(),true);
 
         return $this;
     }

@@ -23,23 +23,7 @@ trait Options
     /**
      * @var array
      */
-    protected $optionDefaults = [
-        'bootstrap' => [
-            'classes' => [
-                'buttons' => [
-                    'export' => 'btn',
-                ],
-                'table' => 'min-w-full divide-y divide-gray-200',
-                'thead' => 'bg-gray-50',
-                'th'=>[
-                    'actions' => 'w-44 flex',
-                ],
-                'td'=>[]
-            ],
-            'container' => true,
-            'responsive' => true,
-        ],
-    ];
+    protected $optionDefaults = [];
 
     /**
      * @param $option
@@ -52,12 +36,22 @@ trait Options
     }
 
     /**
-     * @param  array  $overrides
+     * @param array $overrides
      */
     protected function setOptions(array $overrides = []): void
     {
         foreach ($overrides as $key => $value) {
             data_set($this->optionDefaults, $key, $value);
         }
+    }
+
+    public function getViewOptionProperty()
+    {
+        return 'options';
+    }
+
+    public function getViewOptionButtonsProperty()
+    {
+        return 'options.buttons';
     }
 }

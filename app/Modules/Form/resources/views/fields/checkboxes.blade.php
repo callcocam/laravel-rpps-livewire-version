@@ -7,7 +7,6 @@
     <div class="col-md-2 col-form-label text-md-right py-md-0">
         {{ $field->label }}
     </div>
-
     <div class="col-md">
         @foreach($field->options as $value => $label)
             <div class="form-check">

@@ -88,10 +88,11 @@ if ( ! function_exists('status'))
      * Get the configuration path.
      *
      * @param $key
+     * @param string[] $options
      * @return string
      */
-    function status($key)
+    function status($key, $options = ['draft','published'])
     {
-        return ['draft','published'][$key];
+        return $options[$key];
     }
 }

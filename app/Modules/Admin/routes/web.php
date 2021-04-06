@@ -44,6 +44,10 @@ Route::get('/logout', function (\Illuminate\Http\Request $request) {
 
 Route::get('icons', \App\Modules\Admin\App\Http\Livewire\Utils\Icons::class)->name('icons-admin-index');
 
+Route::get('translations', \App\Modules\Admin\App\Http\Livewire\Translations\ListComponent::class)->name('translations-admin-stores');
+Route::get('translations/create', \App\Modules\Admin\App\Http\Livewire\Translations\CreateComponent::class)->name('translations-admin-create');
+Route::get('translations/{translation}/edit', \App\Modules\Admin\App\Http\Livewire\Translations\EditComponent::class)->name('translations-admin-edit');
+
 Route::get('users', \App\Modules\Admin\App\Http\Livewire\Users\ListComponent::class)->name('users-admin-stores');
 Route::get('users/create', \App\Modules\Admin\App\Http\Livewire\Users\CreateComponent::class)->name('users-admin-create');
 Route::get('users/{user}/edit', \App\Modules\Admin\App\Http\Livewire\Users\EditComponent::class)->name('users-admin-edit');
@@ -70,3 +74,19 @@ Route::get('roles/{role}/edit', \App\Modules\Admin\App\Http\Livewire\Roles\EditC
 
 
 Route::get('permissions', \App\Modules\Admin\App\Http\Livewire\Permissions\ListComponent::class)->name('permissions-admin-stores');
+Route::get('permissions/create', \App\Modules\Admin\App\Http\Livewire\Permissions\CreateComponent::class)->name('permissions-admin-create');
+Route::get('permissions/{permission}/edit', \App\Modules\Admin\App\Http\Livewire\Permissions\EditComponent::class)->name('permissions-admin-edit');
+
+Route::get('posts', \App\Modules\Admin\App\Http\Livewire\Posts\ListComponent::class)->name('posts-admin-stores');
+Route::get('posts/create', \App\Modules\Admin\App\Http\Livewire\Posts\CreateComponent::class)->name('posts-admin-create');
+Route::get('posts/{post}/edit', \App\Modules\Admin\App\Http\Livewire\Posts\EditComponent::class)->name('posts-admin-edit');
+
+Route::get('categories', \App\Modules\Admin\App\Http\Livewire\Categories\ListComponent::class)->name('categories-admin-stores');
+Route::get('categories/create', \App\Modules\Admin\App\Http\Livewire\Categories\CreateComponent::class)->name('categories-admin-create');
+Route::get('categories/{category}/edit', \App\Modules\Admin\App\Http\Livewire\Categories\EditComponent::class)->name('categories-admin-edit');
+
+
+Route::get('sliders', \App\Modules\Admin\App\Http\Livewire\Sliders\ListComponent::class)->name('sliders-admin-stores');
+Route::get('sliders/create', \App\Modules\Admin\App\Http\Livewire\Sliders\CreateComponent::class)->name('sliders-admin-create');
+Route::get('sliders/{slider}/edit', \App\Modules\Admin\App\Http\Livewire\Sliders\EditComponent::class)->name('sliders-admin-edit');
+

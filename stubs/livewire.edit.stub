@@ -7,7 +7,8 @@
 
 namespace [namespace];
 
-use App\Models\[model];
+use [modelNameSpace];
+use SIGA\Form\Fields\Status;
 use SIGA\Form\FormComponent;
 
 class [class] extends FormComponent
@@ -25,6 +26,9 @@ class [class] extends FormComponent
         */
         public function fields()
         {
-            return [];
+            return [
+                    //
+                    Status::make('status')
+                   ];
         }
 }

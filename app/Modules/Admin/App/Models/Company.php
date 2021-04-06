@@ -14,7 +14,7 @@ class Company extends AbstractModel
 {
 
     public function submenus(){
-        return $this->hasMany(SubMenu::class);
+        return $this->hasMany(SubMenu::class) ->orderBy('ordering');
     }
 
     public function menus(){
@@ -26,6 +26,7 @@ class Company extends AbstractModel
     public function menus_admin(){
         return $this->hasOne(Menu::class)
             ->where('name','menusAdmin')
-            ->where('status','1');
+            ->where('status','1')
+            ->orderByDesc('ordering');
     }
 }

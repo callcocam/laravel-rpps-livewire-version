@@ -114,10 +114,13 @@ class BaseField
 
     /**
      * @param $options
+     * @param bool $treatment
+     * @return BaseField
      */
-    public function options($options)
+    public function options($options, $treatment=false)
     {
-        $this->options = Arr::isAssoc($options) ? array_flip($options) : array_combine($options, $options);
+
+        $this->options = $treatment ? Arr::isAssoc($options) ? array_flip($options) : array_combine($options, $options):$options;
         return $this;
     }
     /**

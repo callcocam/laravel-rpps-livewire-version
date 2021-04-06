@@ -41,12 +41,13 @@ class EditComponent extends FormComponent
                 "link",
                 "dropdown",
                 "title",
-            ])->inline(),
+            ], true)->inline(),
             Text::make('Name'),
             Text::make('Slug'),
             Select::make('Menu', 'menu_id')->target($menu, $this->isSingleSelectSearch('menu_id')),
             Select::make('Sub Menus', 'parent')->target($submenu, $this->isSingleSelectSearch('parent')),
             Text::make('Link'),
+            Text::make('Ordering'),
             Select::make('Icone')->options($this->icons()),
         ];
     }
@@ -55,7 +56,9 @@ class EditComponent extends FormComponent
     {
         if(parent::success()){
             $this->emit('loadMenus', true);
+            return true;
         }
+        return false;
     }
 
     protected function icons()

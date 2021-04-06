@@ -55,7 +55,10 @@
 <!-- CoreUI and necessary plugins-->
 <script src="{{ asset('js/coreui.bundle.min.js') }}"></script>
 <script src="{{ asset('js/coreui-utils.js') }}"></script>
+<script src="{{ asset('js/ck-editor/ckeditor.js') }}"></script>
 @livewireScripts
 <script src="{{ asset('js/app.js') }}"></script>
+@stack('js')
+@stack('jsLivewire')
 </body>
 </html>

@@ -7,11 +7,21 @@
 
 namespace SIGA\Table\Traits;
 
+use SIGA\Styles;
+
+use Illuminate\Support\Arr;
 /**
  * Trait Table.
  */
 trait Table
 {
+     /**
+     * Whether or not to display the table header.
+     *
+     * @var bool
+     */
+    public $theme = 'tailwind';
+
     /**
      * Whether or not to display the table header.
      *
@@ -63,7 +73,7 @@ trait Table
      */
     public function setTableHeadClass($attribute): ?string
     {
-        return null;
+        return config(sprintf('laravel-livewire-tables.%s.classes.th', $this->theme),null);
     }
 
     /**
@@ -73,7 +83,7 @@ trait Table
      */
     public function setTableHeadId($attribute): ?string
     {
-        return null;
+        return $attribute;
     }
 
     /**
@@ -83,7 +93,9 @@ trait Table
      */
     public function setTableHeadAttributes($attribute): array
     {
-        return [];
+        $attributes['id'] = $this->setTableHeadId($attribute);
+        $attributes['class'] = $this->setTableHeadClass($attribute);
+        return array_filter($attributes);
     }
 
     /**
@@ -93,7 +105,7 @@ trait Table
      */
     public function setTableRowClass($model): ?string
     {
-        return null;
+        return config(sprintf('laravel-livewire-tables.%s.classes.tr', $this->theme),null);
     }
 
     /**
@@ -113,7 +125,9 @@ trait Table
      */
     public function setTableRowAttributes($model): array
     {
-        return [];
+        $attributes['id'] = $this->setTableRowId($model);
+        $attributes['class'] = $this->setTableRowClass($model);
+        return array_filter($attributes);
     }
 
     /**
@@ -134,7 +148,7 @@ trait Table
      */
     public function setTableDataClass($attribute, $value): ?string
     {
-        return null;
+        return config(sprintf('laravel-livewire-tables.%s.classes.td', $this->theme),null);
     }
 
     /**
@@ -156,6 +170,21 @@ trait Table
      */
     public function setTableDataAttributes($attribute, $value): array
     {
-        return [];
+        $attributes['id'] = $this->setTableDataId($attribute, $value);
+        $attributes['class'] = $this->setTableDataClass($attribute, $value);
+        return array_filter($attributes);
+    }
+     /**
+     * Merge additional attributes / values into the attribute bag.
+     *
+     * @param  array  $attributeDefaults
+     * @param  bool  $escape
+     * @return static
+     */
+    public function merge(array $attributeDefaults = [], $escape = true)
+    {
+        $attributes = new Styles([]);
+
+        return $attributes->merge($attributeDefaults,$escape);
     }
 }

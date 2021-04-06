@@ -1,5 +1,5 @@
 <div class="form-group row" x-data="{open: false}" @click.away="open = false" @close.stop="open = false">
-    <label class="col-md-3 col-form-label" for="{{ $field->name }}"> {{ $field->label }} </label>
+    @include('laravel-livewire-forms::fields.label')
     <div class="col-9" @click="open=true">
         <div class="c-multi-select c-multi-select-multiple c-multi-select-selection-tags" :class="{'c-show':open}">
             @if($this->ValueOptions)

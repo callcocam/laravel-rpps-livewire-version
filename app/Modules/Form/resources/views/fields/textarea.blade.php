@@ -1,5 +1,5 @@
 <div class="form-group row">
-    <label class="col-md-3 col-form-label" for="{{ $field->name }}">{{ $field->label }}</label>
+    @include('laravel-livewire-forms::fields.label')
     <div class="col-md-9">
         <textarea  wire:ignore wire:model.lazy="{{ $field->key }}"  {{ $field->merge(['class'=>$field->class]) }}></textarea>
         @include('laravel-livewire-forms::fields.error-help')

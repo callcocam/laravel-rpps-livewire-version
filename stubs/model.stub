@@ -8,11 +8,12 @@ namespace {{ namespace }};
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use SIGA\Models\AbstractModel;
-use SIGA\Scopes\UuidGenerate;
+//use SIGA\Scopes\UuidGenerate;
 
 class {{ class }} extends AbstractModel
 {
-    use HasFactory, UuidGenerate;
+    use HasFactory;
+    //use UuidGenerate;
 
     protected $guarded = ['id'];
 }

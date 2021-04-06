@@ -7,7 +7,10 @@
             @if ($searchEnabled)
                 @include(table_includes('options.search'))
             @endif
-                @include(table_includes('options.actions'))
+            <div class="col-md-3 col-sm-12">
+                {!! $this->createLink() !!}
+                {!! $this->reloadLink() !!}
+            </div>
         </div>
     </div><!--row-->
 @endif

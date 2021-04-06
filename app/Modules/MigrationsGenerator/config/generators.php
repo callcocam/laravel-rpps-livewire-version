@@ -10,11 +10,11 @@ return [
     |--------------------------------------------------------------------------
     |
     */
-    'model_template_path' => 'storage/templates/model.txt',
+    'model_template_path' => app_path('Modules/MigrationsGenerator/storage/templates/model.txt'),
 
-    'migration_template_path' => 'storage/templates/migration.txt',
+    'migration_template_path' => app_path('Modules/MigrationsGenerator/storage/templates/migration.txt'),
 
-    'migration_template_schema' => 'storage/templates/schema.txt',
+    'migration_template_schema' => app_path('Modules/MigrationsGenerator/storage/templates/schema.txt'),
 
 
     /*

@@ -1,5 +1,5 @@
 <div class="form-group row">
-    <label class="col-md-3 col-form-label" for="{{ $field->name }}">{{ $field->label }}</label>
+    @include('laravel-livewire-forms::fields.label')
     <div class="col-md-9" wire:ignore>
         <div {{ $field->merge(['class'=>$field->class]) }}
              x-data

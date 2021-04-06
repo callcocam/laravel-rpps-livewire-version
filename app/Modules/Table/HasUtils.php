@@ -39,29 +39,13 @@ trait HasUtils
 
     public function createLink()
     {
-        if ($this->permission('create')) {
-            if ($this->route()) {
-                if (Route::has(sprintf('%s-admin-create', $this->route()))) {
-                    return route(sprintf('%s-admin-create', $this->route()), request()->query());
-                }
-            }
-        }
-        return null;
+       return view(table_includes($this->create_view_button()))->with('route', sprintf('%s-admin-create', $this->route()));
 
     }
 
     public function reloadLink()
     {
-        if ($this->permission('stores')) {
-            if ($this->route()) {
-                if (Route::has(sprintf('%s-admin-stores', $this->route()))) {
-                    return route(sprintf('%s-admin-stores', $this->route()));
-                }
-            }
-        }
-
-        return null;
-
+        return view(table_includes($this->reload_view_button()))->with('route', sprintf('%s-admin-stores', $this->route()));
     }
 
     public function permission($action)
@@ -69,8 +53,19 @@ trait HasUtils
         return sprintf('%s-admin-%s', $this->route(), $action);
     }
 
-    public function getRouteKeyName(){
-        return Str::singular(Str::replaceFirst('-','',$this->route()));
+    public function getRouteKeyName()
+    {
+        return Str::singular(Str::replaceFirst('-', '', $this->route()));
+    }
+
+    protected function create_view_button()
+    {
+       return 'actions.create';
+    }
+
+    protected function reload_view_button()
+    {
+        return 'actions.reload';
     }
 
 }
